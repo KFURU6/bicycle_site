@@ -1,0 +1,34 @@
+@media (max-width:780px){
+    .my{
+        display:block;
+        text-align:center;
+    }
+    .container{
+        width:95%;
+    }
+    /* .icon{
+        margin:auto;
+    } */
+    .about-text-box{
+        padding-left:0px;
+    }
+    /* Bicycle-wrapper */
+    .contents{
+        width:95%;
+        display:block;
+    }
+    .content{
+        width:100%;
+    }
+    .text-box{
+        padding-top:15px;
+        padding-bottom:40px;
+    }
+    .text-box p{
+        padding-top:6px;
+    }
+    
+}
+
+@media (min-width:780px){
+}
