@@ -1,4 +1,7 @@
 @media (max-width:780px){
+    .header-list{
+        width:50px;
+    }
     .my{
         display:block;
         text-align:center;
@@ -6,9 +9,6 @@
     .container{
         width:95%;
     }
-    /* .icon{
-        margin:auto;
-    } */
     .about-text-box{
         padding-left:0px;
     }
