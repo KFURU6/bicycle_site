@@ -71,6 +71,9 @@ body{
     height:40px;
 	padding:10px;
 }
+.header-list{
+	width:100px;
+}
 .header-list a{
 	text-align:right;
 	text-decoration:none;
