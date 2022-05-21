@@ -36,15 +36,16 @@ section {
     min-width: 120px;
     max-width: 120px;
     height: inherit;
+    position: relative;
 }
 
-.header-logo > h1 {
-    display: inline-block;
+.header-logo > img {
+    position: absolute;
     top: 50%;
-}
-
-.header-logo > h1 > img {
+    transform: translateY(-50%);
+    display: inline-block;
     width: 100%;
+    line-height: 80px;
 }
 
 .header-list {
@@ -57,7 +58,7 @@ section {
 }
 
 .header-list-item > a {
-    display: inline-block;
+    padding: .3em;
     text-decoration: none;
     color: #383e45;
     line-height: 80px;
@@ -108,6 +109,10 @@ section {
     font-size: 20px;
 }
 
+.about-info > p:nth-of-type(1) {
+    font-weight: 700;
+}
+
 .about-info > p:nth-of-type(2) {
     font-size: 14px;
     line-height: calc(24 / 16);
@@ -115,11 +120,34 @@ section {
 /* /about */
 /* -------------------- */
 
+/* -------------------- */
+/* bicycle */
+.bicycle-cards {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 30px;
+}
 
+.bicycle-image > img {
+    width: 100%;
+}
 
+.bicycle-text {
+    margin-top: 16px;
+}
 
+.bicycle-text > h3 {
+    font-weight: 700;
+}
 
-
+.bicycle-text > p {
+    margin-top: 10px;
+    line-height: calc(20 / 16);
+}
+/* /bicycle */
+/* -------------------- */
 
 /* -------------------- */
 /* footer */
@@ -136,84 +164,50 @@ section {
 /* -------------------- */
 
 @media (max-width:780px) and (min-width:451px){
-    /* .heading{
-        width:90%;
-    } */
-    .header-list{
-        width:200px;
+    /* -------------------- */
+    /* bicycle */
+    .bicycle-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
     }
-    .header-list li{
-        padding-left:5px;
-        float:right;
-    }
-    .my{
-        display:block;
-        text-align:center;
-    }
-    .container{
-        width:95%;
-    }
-    .about-text-box{
-        padding-left:0px;
-    }
-    /* Bicycle-wrapper */
-    .contents{
-        width:95%;
-        display:block;
-    }
-    .content{
-        width:100%;
-    }
-    .text-box{
-        padding-top:15px;
-        padding-bottom:40px;
-    }
-    .text-box p{
-        width:80%;
-        padding-top:6px;
-    }
-    
+    /* /bicycle */
+    /* -------------------- */
 }
 @media (max-width:450px){
-    .heading{
-        width:90%;
+    /* -------------------- */
+    /* header */
+    .header-list-item {
+        margin-right: 8px;
+     }
+    /* /header */
+    /* -------------------- */
+
+    /* -------------------- */
+    /* about */
+    .about-wrap {
+        margin-top: 32px;
+        display: block;
     }
-    .header-list li{
-        padding-left:5px;
-        float:right;
+
+    .about-icon > img {
+        text-align: center;
     }
-    .header-list{
-        width:200px;
+        
+    .about-info {
+        margin-left: 0;
+        margin-top: 24px;
     }
-    .header-list li{
-        padding-left:5px;
-        float:right;
+    /* /about */
+    /* -------------------- */
+
+    /* -------------------- */
+    /* bicycle */
+    .bicycle-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
     }
-    .my{
-        display:block;
-        text-align:center;
-    }
-    .container{
-        width:95%;
-    }
-    .about-text-box{
-        padding-left:0px;
-    }
-    /* Bicycle-wrapper */
-    .contents{
-        width:95%;
-        display:block;
-    }
-    .content{
-        width:100%;
-    }
-    .text-box{
-        margin:auto;
-        width:80%;
-        padding-top:15px;
-        padding-bottom:40px;
-    }
-    .text-box p{
-        padding-top:6px;
-    }
+    /* /bicycle */
+    /* -------------------- */
 }

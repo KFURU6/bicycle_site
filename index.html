@@ -10,10 +10,12 @@
     </head>
 
 <body>
+    <!-- ======================================== -->
+    <!-- header -->
     <header class="header">
         <div class="header-inner inner">
             <div class="header-logo">
-                <h1><img src="./img/picture1.svg" alt=""></h1>
+                <img src="./img/picture1.svg" alt="profile">
             </div>
             <ul class="header-list">
                     <li class="header-list-item"><a href="#About">About</a></li>
@@ -21,9 +23,17 @@
             </ul>
         </div>
     </header>
+    <!-- /header -->
+    <!-- ======================================== -->
 
+    <!-- ======================================== -->
+    <!-- top-image -->
     <div class="top-image"></div>
+    <!-- /top-image -->
+    <!-- ======================================== -->
 
+    <!-- ======================================== -->
+    <!-- about -->
     <section class="about">
         <div class="about-inner inner">
             <h2 class="section-title" id="About">About</h2>
@@ -42,48 +52,73 @@
             </div>
         </div>
     </section>
+    <!-- /about -->
+    <!-- ======================================== -->
 
+    <!-- ======================================== -->
+    <!-- bicycle -->
     <section class="bicycle"> 
-        <h2 class="section-title" id="Bicycle">Bicycle</h1>
-        
-        <div class="bicycle-cards">
-            <div class="bicycle-card">
-                <div class="bicycle-image">
-                    <img src="./img/picture4.jpg">
+        <div class="bicycle-inner inner">
+            <h2 class="section-title" id="Bicycle">Bicycle</h1>
+            <div class="bicycle-cards">
+                <div class="bicycle-card">
+                    <div class="bicycle-image">
+                        <img src="./img/picture4.jpg">
+                    </div>
+                    <div class="bicycle-text">
+                        <h3>Black Panther</h3>
+                        <p>耐久性に優れた「WH-RS330」ホイールを始め、最高のフレーム性能にふさわしいパーツを装備しております。</p>    
+                    </div>
                 </div>
-                <div class="bicycle-text">
-                    <h2>Black Panther</h2>
-                    <p>耐久性に優れた「WH-RS330」ホイールを始め、最高のフレーム性能にふさわしいパーツを装備しております。</p>    
+    
+                <div class="bicycle-card">
+                    <div class="bicycle-image">
+                        <img src="./img/picture5.jpg">
+                    </div>
+                    <div class="bicycle-text">
+                        <h3>無重力</h3>
+                        <p>日本製で最も優れている軽くてサビにも強いアルミパーツ7点が搭載されております。</p>    
+                    </div>
                 </div>
-            </div>
+                
+                <div class="bicycle-card">
+                    <div class="bicycle-image">
+                        <img src="./img/picture6.jpg">
+                    </div>
+                    <div class="bicycle-text">
+                        <h3>Team Lab</h3>
+                        <p>デザインに特化したフレームでおしゃれな自転車です。<br>有名なデザイナー「KEN」が手がけた仕様となっております。</p>    
+                    </div>
+                </div> 
 
-            <div class="bicycle-card">
-                <div class="bicycle-image">
-                    <img src="./img/picture5.jpg">
-                </div>
-                <div class="bicycle-text">
-                    <h2>無重力</h2>
-                    <p>日本製で最も優れている軽くてサビにも強いアルミパーツ7点が搭載されております。</p>    
-                </div>
             </div>
-            
-            <div class="bicycle-card">
-                <div class="bicycle-image">
-                    <img src="./img/picture6.jpg">
-                </div>
-                <div class="bicycle-text">
-                    <h2>Team Lab</h2>
-                    <p>デザインに特化したフレームでおしゃれな自転車です。<br>有名なデザイナー「KEN」が手がけた仕様となっております。
-                    </p>    
-                </div>
-            </div> 
         </div>
     </section>
+    <!-- /bicycle -->
+    <!-- ======================================== -->
 
+    <!-- ======================================== -->
+    <!-- footer -->
     <footer class="footer">
         <div class="footer-inner inner">
             <p>&copy; 2020 Profile</p>
         </div>
     </footer>
+    <!-- /footer -->
+    <!-- ======================================== -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('a[href^="#"]').on('click', function () {
+            const id = $(this).attr('href');
+            let idOffsetTop = 0;
+            if (id != '#') {
+                idOffsetTop = $(id).offset().top;
+            }
+            $('html, body').animate({
+                scrollTop: idOffsetTop
+            }, 800);
+        });
+    </script>
 </body>
 </html>
